@@ -24,7 +24,7 @@ HARDWARE/                  → PCB designs, schematics, Gerber files used for fa
 PCB/                       → Specific PCB layout files (KiCad, Gerber)
 Tiny Firmware/             → Minimal firmware examples or template for microcontroller
 README.md                  → This documentation file
-
+```
 ---
 
 ##  3D Model
@@ -97,7 +97,7 @@ HARDWARE/ → Diseños de PCB, esquemas y archivos Gerber utilizados para la fab
 PCB/ → Archivos específicos de diseño de PCB (KiCad, Gerber)
 Tiny Firmware/ → Ejemplos mínimos de firmware o plantilla para microcontrolador
 README.md → Este archivo de documentación
-
+```
 ---
 
 ## Modelo 3D
