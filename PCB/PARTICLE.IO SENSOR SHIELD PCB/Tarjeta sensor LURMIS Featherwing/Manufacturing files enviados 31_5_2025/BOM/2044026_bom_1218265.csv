@@ -1,0 +1,21 @@
+Designator,"Manufacturer Part Number or Seeed SKU",Quantity,Link
+U2,AB1805-T3,1,https://item.hqchip.com/1102748861.html
+R1,RC0603JR-071K5L,1,
+"R2,R3",RMCF0603JT10K0,2,https://item.hqchip.com/1101293532.html
+Q1,ABS07-120-32.768KHZ-T,1,
+C3,EMCP500G470M1GV001T,1,https://item.hqchip.com/1100650671.html
+"R4,R5",RG1608P-104-B-T5,2,https://item.hqchip.com/1101325767.html
+Q2,2N7002L,1,https://item.hqchip.com/1103150596.html
+U1,AS7341-DLGT,1,https://item.hqchip.com/1105780271.html
+"R6,R7,R8",CRGCQ0603J2K2,3,https://item.hqchip.com/1105771346.html
+C5,CC0603KRX7R7BB104,1,
+U3,AP2127K-1.8TRG1,1,https://item.hqchip.com/1103060261.html
+"C2,C4",CL10B105KP8NNNC,2,
+"R9,R10,R11",CR0603-JW-102ELF,3,https://item.hqchip.com/1101334259.html
+D1,LTST-C190KRKT,1,https://item.hqchip.com/1100067616.html
+D2,MP-3014-1100-50-70,1,https://item.hqchip.com/1106299875.html
+D3,APT1608SF4C-PRV,1,https://item.hqchip.com/1103075460.html
+J1,SM04B-SRSS-TB(LF)(SN),1,
+"D4,D5",LTST-C190GKT,2,https://item.hqchip.com/1100067619.html
+JP1,TSM-102-01-L-SV,1,https://item.hqchip.com/1102248009.html
+JP3,TSM-105-01-L-SV,1,https://item.hqchip.com/1036858135.html
