@@ -1,115 +1,145 @@
-# 💡 Adaptive Telework Environment with AI-based Smart Lighting / Entorno de Teletrabajo Adaptativo con Iluminación Inteligente
+# Adaptive Telework Environment with AI-based Smart Lighting
 
----
+## Overview
 
-##  Overview / Descripción General
+This project—developed as part of the IoT Master's Thesis at UNIR—focuses on designing and implementing a cyber-physical smart lamp. It integrates environmental sensors, edge-level AI, IoT connectivity, and dynamic lighting to monitor and classify workspace conditions, ultimately enhancing comfort, productivity, and well-being for remote and hybrid workers.
 
-**EN**  
-This project, developed as part of the Master's Thesis in IoT at UNIR, presents the design and implementation of a cyber-physical system embodied in a smart lamp. The lamp integrates environmental sensors, an AI model on the edge, IoT connectivity, and dynamic lighting control to monitor and classify workspace conditions—enhancing comfort, productivity, and well-being for remote and hybrid workers.
+<img width="908" height="457" alt="Render_lamp" src="https://github.com/user-attachments/assets/e3c23c5b-15d6-4534-84e9-21c34287de9b" />
 
-**ES**  
-Este proyecto, desarrollado como parte del Trabajo de Fin de Máster en IoT de la UNIR, presenta el diseño e implementación de un sistema ciber-físico en forma de lámpara inteligente. La lámpara integra sensores ambientales, un modelo de IA en el borde, conectividad IoT y control dinámico de iluminación para monitorizar y clasificar condiciones del espacio de trabajo—mejorando confort, productividad y bienestar para trabajadores remotos o en modalidad híbrida.
 
----
+## Key Features
 
-##  Key Features / Características Principales
+- Custom PCB integrating sensors: temperature, humidity, light spectrum, noise, CO₂, VOCs.
+- Dynamic lighting control based on open-source WLED.
+- TinyML (with Edge Impulse) model on the edge to classify environments as *good, moderate,* or *bad*.
+- Real-time visualization via Datacake.
+- Interactive online 3D model accessible at: https://lurmis.vercel.app/en
 
-- **EN**: Custom PCB integrating multiple sensors (temperature, humidity, light spectrum, noise, CO₂, VOCs).  
-- **ES**: PCB personalizada que integra múltiples sensores (temperatura, humedad, espectro lumínico, ruido, CO₂, COVs).
+## Repository Structure
 
-- **EN**: Based on open-source **WLED** for dynamic lighting control.  
-- **ES**: Basada en **WLED** de código abierto para control dinámico de iluminación.
-
-- **EN**: Edge AI model (TinyML with Edge Impulse) classifies environmental conditions into: *good, moderate, bad*.  
-- **ES**: Modelo de IA en el borde (TinyML con Edge Impulse) que clasifica las condiciones en: *buenas, moderadas, malas*.
-
-- **EN**: Real-time data visualization with [Datacake].  
-- **ES**: Visualización de datos en tiempo real con [Datacake].
-
----
-
-##  Repository Structure / Estructura del Repositorio
+Here’s the layout of the project and what each part contains:
 
 ```text
-.vscode/                       → IDE configuration files
-Hardware/                      → PCB designs, schematics, Gerber files
-Diseño Lampará - Lamp Design.zip → 3D model files of the lamp
-examples/static_buffer/        → Code examples (static_buffer)
-lib/                           → External libraries
-src/                           → Source code
-target/6.2.1/argon/            → Compiled output for Argon
-firmware.bin                   → Compiled firmware binary
-memory-use.log                 → Memory usage log
-project.properties             → Project properties
-README.md                      → This file
-```
+HARDWARE/                  → PCB designs, schematics, Gerber files used for fabrication
+PCB/                       → Specific PCB layout files (KiCad, Gerber)
+Tiny Firmware/             → Minimal firmware examples or template for microcontroller
+README.md                  → This documentation file
 
 ---
 
-##  Model 3D / 3D Model
+##  3D Model
 
-- **EN**: Explore the interactive 3D model of the smart lamp online here:  
-  👉 [3D Lamp Model](https://lurmis.vercel.app/en)
+Explore the interactive 3D model of the smart lamp here:
+https://lurmis.vercel.app/en
 
-- **ES**: Explora el modelo 3D interactivo de la lámpara inteligente aquí:  
-  👉 [Modelo 3D de la lámpara](https://lurmis.vercel.app/es)
+##  Getting Started
+
+1. Clone this repository.
+2. Inspect the HARDWARE/ and PCB/ folders for PCB design sources.
+3. Use the Tiny Firmware/ folder to explore or flash firmware.
+4. Follow the README instructions in each folder to assemble, program, and visualize your setup.
 
 ---
 
 ##  Dashboard Example / Ejemplo de Dashboard
 
-[Public Datacake Dashboard Example](https://datacake.co/blog/public-links-for-device-dashboards-how-to-share-lorawan-mqtt-devices-on-datacake-iot-platform)
+[Public Datacake Dashboard Example](https://app.datacake.de/dashboard/d/b61564c8-49cd-4808-8c22-bb57cf323bb0)
 
 ---
 
-##  Getting Started / Cómo Empezar
-
-**EN**  
-1. Clone this repository.  
-2. Navigate to the `src/` or `Hardware/` folders as needed for code or PCB design.  
-3. Open `/firmware` (if existing) with PlatformIO or Arduino IDE, or use `firmware.bin` to flash directly.  
-4. Configure Wi-Fi / LoRa / MQTT credentials if applicable.  
-5. Deploy or view the project dashboard using Datacake.
-
-**ES**  
-1. Clona este repositorio.  
-2. Navega a las carpetas `src/` o `Hardware/` según necesites para código o diseño PCB.  
-3. Abre `/firmware` (si existe) con PlatformIO o Arduino IDE, o usa `firmware.bin` para flashear directamente.  
-4. Configura las credenciales Wi-Fi / LoRa / MQTT si aplica.  
-5. Despliega o visualiza el dashboard del proyecto usando Datacake.
-
----
-
-##  System Architecture / Arquitectura del Sistema
+##  System Architecture
 
 <img width="945" height="484" alt="image" src="https://github.com/user-attachments/assets/d104de6f-2ce4-4e7b-86a0-59acdf961c03" />
 
 
 ---
 
-##  Acknowledgments / Agradecimientos
+##  Acknowledgments
 
-- **EN**: **SEEEDSTUDIO Fusion PCB Service** for manufacturing the custom PCB.  
-- **ES**: **Servicio Fusion PCB de SEEEDSTUDIO** por fabricar la PCB personalizada.
-
-- **EN**: **Datacake** for IoT device dashboards and remote monitoring.  
-- **ES**: **Datacake** por proporcionar dashboards IoT y monitoreo remoto.
-
-- **EN**: **Adafruit & Edge Impulse** for sensor libraries and TinyML tools.  
-- **ES**: **Adafruit y Edge Impulse** por las bibliotecas de sensores y herramientas TinyML.
-
-- **EN**: **UNIR – Universidad Internacional de La Rioja** for academic guidance.  
-- **ES**: **UNIR – Universidad Internacional de La Rioja** por la orientación académica.
+SEEEDSTUDIO Fusion PCB Service for sponsoring the manufacturing and assembly of our PCBs and UNIR – Universidad Internacional de La Rioja for the academic guidance.
 
 ---
 
-##  License / Licencia
+##  License
 
-This project is released under the [MIT License].  
-Este proyecto se distribuye bajo la [Licencia MIT].
+This project is released under the [MIT License].
 
 ---
 
-✍️ **Developed by / Desarrollado por:**  
-David Felipe Castiblanco Cantor & Óscar Martínez Cueto  
+✍️ Developed by
+**David Felipe Castiblanco Cantor** & **Óscar Martínez Cueto**  
+Master in IoT – UNIR, 2025
+
+------------------------------------------------------------------------
+
+# Entorno de teletrabajo adaptativo con iluminación inteligente basada en IA
+
+## Resumen
+
+Este proyecto, desarrollado como parte del Trabajo Fin de Máster en IoT en la UNIR, se centra en el diseño e implementación de una lámpara inteligente ciberfísica. Integra sensores ambientales, IA de vanguardia, conectividad IoT e iluminación dinámica para monitorizar y clasificar las condiciones del espacio de trabajo, mejorando así la comodidad, la productividad y el bienestar de los trabajadores remotos e híbridos.
+
+
+<img width="908" height="457" alt="Render_lamp" src="https://github.com/user-attachments/assets/e3c23c5b-15d6-4534-84e9-21c34287de9b" />
+
+## Características principales
+
+- PCB personalizada que integra sensores: temperatura, humedad, espectro luminoso, ruido, CO₂, COV.
+- Control dinámico de la iluminación basado en WLED de código abierto. - Modelo TinyML (con Edge Impulse) en el borde para clasificar entornos como *buenos, moderados* o *malos*.
+- Visualización en tiempo real mediante Datacake.
+- Modelo 3D interactivo en línea disponible en: https://lurmis.vercel.app/en
+
+## Estructura del repositorio
+
+A continuación, se muestra el diseño del proyecto y el contenido de cada parte:
+
+```texto
+HARDWARE/ → Diseños de PCB, esquemas y archivos Gerber utilizados para la fabricación
+PCB/ → Archivos específicos de diseño de PCB (KiCad, Gerber)
+Tiny Firmware/ → Ejemplos mínimos de firmware o plantilla para microcontrolador
+README.md → Este archivo de documentación
+
+---
+
+## Modelo 3D
+
+Explora el modelo 3D interactivo de la lámpara inteligente aquí:
+https://lurmis.vercel.app/en
+
+## Primeros pasos
+
+1. Clona este repositorio.
+2. Revise las carpetas HARDWARE/ y PCB/ para encontrar las fuentes de diseño de PCB.
+
+3. Use la carpeta Tiny Firmware/ para explorar o actualizar el firmware.
+
+4. Siga las instrucciones del archivo README en cada carpeta para ensamblar, programar y visualizar su configuración.
+
+---
+
+## Ejemplo de Dashboard / Ejemplo de Dashboard
+
+[Ejemplo de Dashboard Público de Datacake](https://app.datacake.de/dashboard/d/b61564c8-49cd-4808-8c22-bb57cf323bb0)
+
+---
+
+## Arquitectura del Sistema
+
+<img width="945" height="484" alt="image" src="https://github.com/user-attachments/assets/d104de6f-2ce4-4e7b-86a0-59acdf961c03" />
+
+---
+
+## Agradecimientos
+
+A SEEEDSTUDIO Fusion PCB Service por el patrocinio de la fabricación y el ensamblaje de nuestras PCB y a UNIR – Universidad Internacional de La Rioja por la orientación académica.
+
+---
+
+## Licencia
+
+Este proyecto se publica bajo la [Licencia MIT].
+
+---
+
+✍️ Desarrollado por:  
+**David Felipe Castiblanco Cantor** & **Óscar Martínez Cueto**  
 Master in IoT – UNIR, 2025
